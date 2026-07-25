@@ -1,12 +1,8 @@
-import Homepage1 from "../../Pages/Homepage/Homepage1"
-import Homepage2, { Function1 } from "../../Pages/Homepage/Homepage2"
-
-const Homepage = () => {
+function Homepage(){
     return (
         <>
-            <Homepage1 />
-            <Homepage2 />
-            <Function1 />
+            
+            <h1>Home Page</h1>
         </>
     )
 }
