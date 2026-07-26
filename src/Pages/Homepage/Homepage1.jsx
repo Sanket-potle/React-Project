@@ -1,21 +1,46 @@
-import React, { useState } from 'react'
-const Homepage1 = () => {
-    const [counter, setCounter] = useState(0)
-    return (
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import {Link} from "react-router-dom";
+
+function NavbarMenu() {
+  return (
+    <Navbar expand="lg" className="bg-body-tertiary">
+      <Container>
+        <Navbar.Brand as={Link}to="/">React-Bootstrap</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link as={Link}to="/">Home</Nav.Link>
+            <Nav.Link as={Link}to="/aboutus">About Us</Nav.Link>
+            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+                Another action
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">
+                Separated link
+              </NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  );
+}
+
+export const Test = () => {
+    return(
         <>
-            <div className="text-center">
-                <h1 className="text-4xl text-center">Hello Users:{counter}</h1>
-                <div className="flex justify-center gap-5 pt-5">
-                    <button onClick={() => setCounter(counter + 1)} className="bg-blue-500 text-white px-4 py-2 rounded">
-                        Increase Counter
-                    </button>
-                    <button onClick={() => setCounter(counter - 1)} className="bg-blue-500 text-white px-4 py-2 rounded">
-                        Decrase Counter
-                    </button>
-                </div>
-            </div>
+        <div className="container">
+            <h1>Welcome to the Homepage</h1>
+            <p>This is a simple homepage component.</p>
+        </div>
         </>
     )
-
 }
-export default Homepage1;
+
+export default NavbarMenu;

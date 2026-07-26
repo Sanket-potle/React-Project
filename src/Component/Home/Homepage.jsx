@@ -1,9 +1,12 @@
+import Homepage1,{Test} from "../../Pages/Homepage/Homepage1";
+
 function Homepage() {
     return (
         <>
-
-            <h1>Home Page</h1>
+            <Homepage1 />
+            <Test />
         </>
+ 
     )
 }
 
