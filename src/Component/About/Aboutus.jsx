@@ -1,9 +1,13 @@
-import Homepage from "../Home/Homepage";
+import { useState } from "react";
 
 const Aboutpage = () => {
+    
+    const [count, setCount]=useState(0);
+    console.log('TotalCount:',count);
     return (
         <>
-            <Homepage/>
+          
+            <button onClick={()=> setCount(count + 1)}>Ok</button>
         </>
     )
 }

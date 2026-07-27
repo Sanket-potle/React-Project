@@ -1,0 +1,12 @@
+.main {
+  background-color: red;
+}
+@media (max-width: 480px) {
+  .main {
+    background-color: orange;
+  }
+}
+
+.aboutpage {
+  font-size: 21px;
+}/*# sourceMappingURL=global.css.map */

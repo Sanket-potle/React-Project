@@ -2,20 +2,26 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import {Link} from "react-router-dom";
+import {NavLink, useLocation} from "react-router-dom";
+
+
 
 function NavbarMenu() {
+  const location = useLocation()
+  console.log('Location', location.pathname)
+  const isBlog =location.pathname ==='/blog'
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand as={Link}to="/">React-Bootstrap</Navbar.Brand>
+        <Navbar.Brand as={NavLink}to="/">Logo</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link as={Link}to="/">Home</Nav.Link>
-            <Nav.Link as={Link}to="/aboutus">About Us</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+          <Nav className="ms-auto">
+            <Nav.Link as={NavLink} to="/">Home</Nav.Link>
+            <Nav.Link as={NavLink } to="/aboutus">About Us</Nav.Link>
+            <NavDropdown title="Dropdown" id="basic-nav-dropdown"
+            className= {isBlog ? 'active':''} >
+              <NavDropdown.Item as={NavLink} to="/blog">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 Another action
               </NavDropdown.Item>
@@ -32,15 +38,5 @@ function NavbarMenu() {
   );
 }
 
-export const Test = () => {
-    return(
-        <>
-        <div className="container">
-            <h1>Welcome to the Homepage</h1>
-            <p>This is a simple homepage component.</p>
-        </div>
-        </>
-    )
-}
 
 export default NavbarMenu;

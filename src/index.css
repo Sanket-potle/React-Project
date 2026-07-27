@@ -1,0 +1,12 @@
+.navbar .nav-link.active {
+  background-color: #00ff26; 
+  color: #fff;
+}
+.dropdown-item.active {
+  background-color: royalblue !important; 
+  color: #fff;
+}
+
+.nav-item.dropdown.active{
+    background-color:pink
+}
