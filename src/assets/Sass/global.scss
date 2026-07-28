@@ -1,11 +1,13 @@
-@use './media'  as *;
-.main{
+@use './media' as *;
+
+.main {
     background-color: red;
-    @include mobile{
+
+    @include mobile {
         background-color: orange;
     }
 }
 
-.aboutpage{
+.aboutpage {
     font-size: 21px;
 }

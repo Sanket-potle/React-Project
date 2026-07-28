@@ -4,7 +4,7 @@ import './index.css'
 import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './assets/Sass/'
+import './assets/Sass/global.scss'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
