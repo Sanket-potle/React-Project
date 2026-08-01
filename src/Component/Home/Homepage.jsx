@@ -1,8 +1,11 @@
+import ProductCall from "../UseEffect/ProductCall";
+
+
 
 function Homepage() {
     return (
         <>
-            {/* <Homepage1 /> */}
+            <ProductCall/>
         </>
  
     )
