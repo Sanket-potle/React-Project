@@ -1,8 +1,10 @@
-const ProdctCallthree = (product) => {
+import ProductCallfour from "./ProductCallfour";
+
+const ProdctCallthree = ({ product }) => {
     console.log('propsTest', product)
-    return(
+    return (
         <>
-        
+            <productCallfour product={product} />
         </>
     )
 }

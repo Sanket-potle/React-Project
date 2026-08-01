@@ -27,7 +27,7 @@ const ProductCall = () => {
     <>
       <h1>Product List</h1>
 
-      {/* {product.map((item) => (
+      {product.map((item) => (
         <div
           key={item.id}
           style={{
@@ -37,10 +37,12 @@ const ProductCall = () => {
           }}
         >
           <h2>{item.title}</h2>
-          
+          <p>{item.description}</p>
+          <img src={item.images[0]} style={{ width: "100px" }} />
+
         </div>
-      ))} */}
-      <ProductCalltwo product={product} name="John" />
+      ))}
+      {/* <ProductCalltwo product={product} name="John" /> */}
     </>
   );
 };

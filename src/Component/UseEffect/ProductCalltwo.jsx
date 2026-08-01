@@ -1,11 +1,10 @@
-import ProductCall from "./ProductCall";
 import ProductCallthree from "./ProductCallthree";
 
 const ProdctCalltwo = (product) => {
     console.log('propsTest', product)
-    return(
+    return (
         <>
-        <ProductCallthree product={product}/>
+            <ProductCallthree product={product} />
         </>
     )
 }
