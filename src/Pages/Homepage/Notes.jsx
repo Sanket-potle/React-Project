@@ -23,3 +23,8 @@
 
 // 8.What is Flag?
 // >Flag is a boolean value that we use to manage the state of the component.
+
+// 9. Context API?
+// >
+
+// Make it App Global
