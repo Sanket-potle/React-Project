@@ -19,7 +19,7 @@ function App() {
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog2" element={<BlogPage2 />} />
       </Routes>
-      
+
     </>
   )
 }
