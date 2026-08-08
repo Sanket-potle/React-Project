@@ -1,16 +1,16 @@
 import axios from "axios";
 import {createContext, useEffect, useState } from "react";
 // import ProductCalltwo from "./ProductCalltwo";
-import ContextApiChaptwo from "./ContextApiChaptwo";
+
 
 // Context API 
 // Create, Provide, Consumer
 
 const DataContext = createContext();
-const ContextApi = () => {
+const ContextApi = ({children}) => {
   const [product, setProduct] = useState([]);
 
-  console.log("Products:", product);
+  // console.log("Products:", product);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -30,7 +30,7 @@ const ContextApi = () => {
 
   return (
     <>
-      <h1>Product List</h1>
+      {/* <h1>Product List</h1> */}
 
       {/* {product.map((item) => (
         <div
@@ -46,7 +46,7 @@ const ContextApi = () => {
         </div>
       ))} */}
       <DataContext.Provider value={product}>
-        <ContextApiChaptwo />
+        {children}
       </DataContext.Provider>
     </>
   );

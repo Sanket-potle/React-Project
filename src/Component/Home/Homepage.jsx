@@ -1,7 +1,6 @@
 import ContextApi from "../ContextAPI/ContextApi";
+import Lecture6 from "../Lecture6/Lecture6";
 import ProductCall from "../UseEffect/ProductCall";
-
-
 
 function Homepage() {
     return (
@@ -9,7 +8,9 @@ function Homepage() {
 
             {/* <ProductCall/> */}
             <ContextApi/>
-            <ProductCall />
+            {/* <ProductCall /> */}
+            <Lecture6/>
+            
 
         </>
 

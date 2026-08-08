@@ -28,4 +28,7 @@
 // 9. Context API?
 // >
 
+// 10.Usememo?
+// >UseMemo Hook we use in react to improve the performance by avoiding unnecessary recalculation it is use with filtering, sorting and with large calculation.
+
 // Make it App Global

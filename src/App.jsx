@@ -6,6 +6,7 @@ import AboutusPage from "./Component/About/Aboutus";
 import BlogPage from './Component/Blog/BlogPage';
 import NavbarMenu from './Pages/Homepage/NavbarMenu';
 import BlogPage2 from './Component/Blog/BlogPage2';
+import ViewDetails from './Component/ContextAPI/ViewDetails';
 
 
 
@@ -18,6 +19,7 @@ function App() {
         <Route path="/aboutus" element={<AboutusPage />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog2" element={<BlogPage2 />} />
+        <Route path="/viewdetails/:id" element={<ViewDetails />} />
       </Routes>
 
     </>
