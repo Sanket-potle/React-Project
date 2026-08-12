@@ -3,11 +3,11 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 const ViewDetails = () => {
-const[product, setProduct] = useState({});
-    const {id} = useParams()
+  const [product, setProduct] = useState({});
+  const { id } = useParams()
 
-    console.log('id12222222', id)
-    useEffect(() => {
+  console.log('id12222222', id)
+  useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
