@@ -2,6 +2,8 @@ import { useState } from "react";
 import ContextApiChaptwo from "../ContextAPI/ContextApiChaptwo";
 import Testusestate from "./Testusestate";
 import Form from "./Form";
+import Submitform from "../Form/Submitform";
+import Submitform2 from "../Form/Submitform2";
 
 const Aboutpage = () => {
 
@@ -14,6 +16,8 @@ const Aboutpage = () => {
             {/* <ContextApiChaptwo /> */}
             {/* <Testusestate /> */}
             <Form />
+            <Submitform />
+            <Submitform2 />
 
         </>
     )
