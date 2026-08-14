@@ -4,6 +4,7 @@ import Testusestate from "./Testusestate";
 import Form from "./Form";
 import Submitform from "../Form/Submitform";
 import Submitform2 from "../Form/Submitform2";
+import Checkboes from "../Form/Checkboxes";
 
 const Aboutpage = () => {
 
@@ -18,6 +19,7 @@ const Aboutpage = () => {
             <Form />
             <Submitform />
             <Submitform2 />
+            <Checkboes/>
 
         </>
     )
