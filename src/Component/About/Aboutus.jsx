@@ -5,6 +5,7 @@ import Form from "./Form";
 import Submitform from "../Form/Submitform";
 import Submitform2 from "../Form/Submitform2";
 import Checkboes from "../Form/Checkboxes";
+import RegistrationForm from "../Form/RegisreationForm";
 
 const Aboutpage = () => {
 
@@ -19,7 +20,9 @@ const Aboutpage = () => {
             <Form />
             <Submitform />
             <Submitform2 />
-            <Checkboes/>
+            {/* <Checkboes/> */}
+            <RegistrationForm/>
+            
 
         </>
     )
