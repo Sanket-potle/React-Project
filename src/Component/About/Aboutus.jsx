@@ -21,8 +21,8 @@ const Aboutpage = () => {
             <Submitform />
             <Submitform2 />
             {/* <Checkboes/> */}
-            <RegistrationForm/>
-            
+            <RegistrationForm />
+
 
         </>
     )
