@@ -96,7 +96,7 @@ const RegistrationForm = () => {
               value="male"
               checked={values.gender === 'male'} />
 
-            <label htmlFor="Female">FeMale</label>
+            <label htmlFor="Female">Female</label>
             <input type="radio"
               id="Female"
               name="gender"
@@ -110,12 +110,13 @@ const RegistrationForm = () => {
             {hobbies.map((itam) => {
               return (
                 <>
-                  <label htmlFor="">
+                  <label htmlFor={`hobby-${item.id}`}>
                     <Field
                       type="checkbox"
+                      id={`hobby-${item.id}`}
                       name="hobbies"
                       value={itam.value} />
-                    {itam.label}
+                    {itam.name}
                   </label>
                 </>
               )

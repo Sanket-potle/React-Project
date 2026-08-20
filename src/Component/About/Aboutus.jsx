@@ -17,9 +17,9 @@ const Aboutpage = () => {
             {/* <button onClick={()=> setCount(count + 1)}>Ok</button> */}
             {/* <ContextApiChaptwo /> */}
             {/* <Testusestate /> */}
-            <Form />
-            <Submitform />
-            <Submitform2 />
+            {/* <Form /> */}
+            {/* <Submitform /> */}
+            {/* <Submitform2 /> */}
             {/* <Checkboes/> */}
             <RegistrationForm />
 
