@@ -1,3 +1,4 @@
+import { Table } from "react-bootstrap";
 const Userobject = () => {
     const Userdata = [
         {
@@ -21,7 +22,7 @@ const Userobject = () => {
     ]
     return (
         <>
-            <table className="border:1px ">
+            <Table striped bordered hover size="sm">
                 <thead>
                     <tr>
                         <td>ID</td>
@@ -42,7 +43,7 @@ const Userobject = () => {
                         ))
                     }
                 </tbody>
-            </table>
+            </Table>
         </>
     )
 }
