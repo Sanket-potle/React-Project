@@ -8,38 +8,64 @@ const RegistrationForm = () => {
     { id: 1, name: "Maharashtra", stateId: 1 },
     { id: 2, name: "UP", stateId: 2 },
     { id: 3, name: "DD", stateId: 3 },
-  ]
+  ];
   const city = [
     { id: 1, name: "Mumbai", stateId: 1 },
     { id: 2, name: "Mirzapur", stateId: 2 },
     { id: 3, name: "Ladakh", stateId: 3 },
-  ]
+  ];
 
   const hobbies = [
     { id: 1, name: "Cricket", value: "Cricket" },
     { id: 2, name: "Kabaddi", value: "Kabaddi" },
     { id: 3, name: "BGMI", value: "BGMI" },
-  ]
+  ];
   return (
     <>
       <Formik
-        initialValues={{ username: "", password: "", state: "", gender: "", hobbies: [] }}
+        initialValues={{
+          username: "",
+          password: "",
+          state: "",
+          gender: "",
+          hobbies: [],
+        }}
         validate={(values) => {
           const errors = {};
+
           if (!values.username) {
-            errors.username = "Required";
+            errors.username = "Username is required";
           }
+
+          if (!values.password) {
+            errors.password = "Password is required";
+          }
+
+          if (!values.state) {
+            errors.state = "Please select state";
+          }
+
+          if (!values.gender) {
+            errors.gender = "Please select gender";
+          }
+
           return errors;
         }}
         onSubmit={async (values, { setSubmitting }) => {
           try {
-            const response = await axios.post(`https://dummyjson.com/auth/login`, values);
-            console.log('Response', response)
+            const response = await axios.post(
+              "https://dummyjson.com/auth/login",
+              {
+                username: values.username,
+                password: values.password,
+              },
+            );
 
-          } catch (erro) {
-            console.log("err", erro);
+            console.log("Response", response.data);
+          } catch (error) {
+            console.log("Error", error);
           } finally {
-            setSubmitting(false)
+            setSubmitting(false);
           }
         }}
       >
@@ -53,6 +79,7 @@ const RegistrationForm = () => {
           isSubmitting,
         }) => (
           <form onSubmit={handleSubmit}>
+            {/* Username */}
             <input
               type="text"
               name="username"
@@ -60,7 +87,12 @@ const RegistrationForm = () => {
               onBlur={handleBlur}
               value={values.username}
             />
-            {errors.username && touched.username && errors.username}
+
+            {errors.username && touched.username && (
+              <span>{errors.username}</span>
+            )}
+
+            {/* Password */}
             <input
               type="password"
               name="password"
@@ -68,70 +100,83 @@ const RegistrationForm = () => {
               onBlur={handleBlur}
               value={values.password}
             />
+
+            {errors.password && touched.password && (
+              <span>{errors.password}</span>
+            )}
+
+            {/* State */}
             <select
               name="state"
               onChange={(e) => {
-                handleChange(e)
-                setStateId(e.target.value)
+                handleChange(e);
+                setStateId(e.target.value);
               }}
               onBlur={handleBlur}
               value={values.state}
             >
-              <option value="" disabled>Please Select Your State</option>
-              {states.map((state) => {
-                return (
-                  <>
-                    <option value={state.name}>{state.name}</option>
-                  </>
-                )
-              })}
+              <option value="" disabled>
+                Please Select Your State
+              </option>
+
+              {states.map((state) => (
+                <option key={state.id} value={state.name}>
+                  {state.name}
+                </option>
+              ))}
             </select>
+
+            {/* Gender */}
             <br />
+
             <label htmlFor="male">Male</label>
-            <input type="radio"
+            <input
+              type="radio"
               id="male"
               name="gender"
-              onChange={handleChange}
-              onBlur={handleBlur}
               value="male"
-              checked={values.gender === 'male'} />
-
-            <label htmlFor="Female">Female</label>
-            <input type="radio"
-              id="Female"
-              name="gender"
               onChange={handleChange}
               onBlur={handleBlur}
-              value="Female"
-              checked={values.gender === 'Female'} />
+              checked={values.gender === "male"}
+            />
+
+            <label htmlFor="female">Female</label>
+            <input
+              type="radio"
+              id="female"
+              name="gender"
+              value="female"
+              onChange={handleChange}
+              onBlur={handleBlur}
+              checked={values.gender === "female"}
+            />
+
             <br />
 
+            {/* Hobbies */}
+            {hobbies.map((itam) => (
+              <div key={itam.id}>
+                <label htmlFor={`hobby-${itam.id}`}>
+                  <Field
+                    type="checkbox"
+                    id={`hobby-${itam.id}`}
+                    name="hobbies"
+                    value={itam.value}
+                  />
+                  {itam.name}
+                </label>
+              </div>
+            ))}
 
-            {hobbies.map((itam) => {
-              return (
-                <>
-                  <label htmlFor={`hobby-${item.id}`}>
-                    <Field
-                      type="checkbox"
-                      id={`hobby-${item.id}`}
-                      name="hobbies"
-                      value={itam.value} />
-                    {itam.name}
-                  </label>
-                </>
-              )
-            }
-
-            )}
-            {errors.password && touched.password && errors.password}
+            {/* Submit */}
             <button type="submit" disabled={isSubmitting}>
-              Submit
+              {isSubmitting ? "Submitting..." : "Submit"}
             </button>
           </form>
         )}
       </Formik>
     </>
-  )
-}
+  );
+};
 
 export default RegistrationForm;

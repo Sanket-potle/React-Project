@@ -10,28 +10,6 @@ import Counter from "../CustomHook/Counter";
 import Product from "../Products/Product";
 
 const Aboutpage = () => {
-<<<<<<< Updated upstream
-
-    const [count, setCount] = useState(0);
-    // console.log('TotalCount:',count);
-    return (
-        <>
-
-            {/* <button onClick={()=> setCount(count + 1)}>Ok</button> */}
-            {/* <ContextApiChaptwo /> */}
-            {/* <Testusestate /> */}
-            {/* <Form /> */}
-            {/* <Submitform /> */}
-            {/* <Submitform2 /> */}
-            {/* <Checkboes/> */}
-            <RegistrationForm />
-
-
-        </>
-    )
-}
-export default Aboutpage;
-=======
   const [count, setCount] = useState(0);
   // console.log('TotalCount:',count);
   return (
@@ -44,8 +22,8 @@ export default Aboutpage;
       <Submitform2 />
       {/* <Checkboes/> */}
       <RegistrationForm />
+      <Product />
     </>
   );
 };
 export default Aboutpage;
->>>>>>> Stashed changes
