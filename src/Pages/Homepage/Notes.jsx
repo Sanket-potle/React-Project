@@ -31,4 +31,7 @@
 // 10.Usememo?
 // >UseMemo Hook we use in react to improve the performance by avoiding unnecessary recalculation it is use with filtering, sorting and with large calculation.
 
+// 11.Custom Hook?
+// >custom hook is the js function which use to remove the duplicate logic. and start with use.
+
 // Make it App Global

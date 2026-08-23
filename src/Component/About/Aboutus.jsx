@@ -6,8 +6,11 @@ import Submitform from "../Form/Submitform";
 import Submitform2 from "../Form/Submitform2";
 import Checkboes from "../Form/Checkboxes";
 import RegistrationForm from "../Form/RegisreationForm";
+import Counter from "../CustomHook/Counter";
+import Product from "../Products/Product";
 
 const Aboutpage = () => {
+<<<<<<< Updated upstream
 
     const [count, setCount] = useState(0);
     // console.log('TotalCount:',count);
@@ -28,3 +31,21 @@ const Aboutpage = () => {
     )
 }
 export default Aboutpage;
+=======
+  const [count, setCount] = useState(0);
+  // console.log('TotalCount:',count);
+  return (
+    <>
+      {/* <button onClick={()=> setCount(count + 1)}>Ok</button> */}
+      {/* <ContextApiChaptwo /> */}
+      {/* <Testusestate /> */}
+      <Form />
+      <Submitform />
+      <Submitform2 />
+      {/* <Checkboes/> */}
+      <RegistrationForm />
+    </>
+  );
+};
+export default Aboutpage;
+>>>>>>> Stashed changes
