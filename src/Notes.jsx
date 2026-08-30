@@ -10,7 +10,7 @@ import { BrowserRouter, Route, Routes, useParams } from "react-router-dom";
 // >Hooks are special react functions that let functional components to use state and lifecycle behaviors and many more features.
 
 // 3.what is usestate?
-// >Usestate use to create state and manage state in functional component
+// >Usestate use to create state and manage state in functional component.
 
 // 4. What is useEffect?
 // >UseEffect hook is used to perform side effects task.

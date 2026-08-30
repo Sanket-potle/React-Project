@@ -1,5 +1,5 @@
 import axios from "axios";
-import {createContext, useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 // import ProductCalltwo from "./ProductCalltwo";
 
 
@@ -7,7 +7,7 @@ import {createContext, useEffect, useState } from "react";
 // Create, Provide, Consumer
 
 const DataContext = createContext();
-const ContextApi = ({children}) => {
+const ContextApi = ({ children }) => {
   const [product, setProduct] = useState([]);
 
   // console.log("Products:", product);
@@ -53,4 +53,4 @@ const ContextApi = ({children}) => {
 };
 
 export default ContextApi;
-export{DataContext};
+export { DataContext };
