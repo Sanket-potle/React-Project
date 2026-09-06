@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import counterReducer from "./CounterSlice";
+import CounterSlice from "./CounterSlice";
+// import UserNameSlice from "./UserNameSlice";
 
-const store = configureStore({
+export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    counter: CounterSlice,
+    // ReactProject: UserNameSlice,
   },
 });
-
-export default store;

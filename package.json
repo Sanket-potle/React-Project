@@ -10,13 +10,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.12.0",
     "axios": "^1.19.0",
     "bootstrap": "^5.3.8",
     "dom": "^0.0.3",
     "formik": "^2.4.9",
+    "install": "^0.13.0",
+    "npm": "^11.19.1",
     "react": "^19.2.0",
     "react-bootstrap": "^2.10.10",
     "react-dom": "^19.2.0",
+    "react-redux": "^9.3.0",
     "react-router-dom": "^7.18.1",
     "router": "^2.2.0",
     "sass": "^1.102.0"
