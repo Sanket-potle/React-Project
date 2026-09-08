@@ -7,10 +7,10 @@ const UserNameSlice = createSlice({
   },
   reducers: {
     changeName: (state) => {
-      state.name = "Sanket Potle";
-    },
+      state.userName = "Potle"
+    }
   },
-});
 
+});
 export const { changeName } = UserNameSlice.actions;
 export default UserNameSlice.reducer;
