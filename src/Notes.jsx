@@ -57,4 +57,11 @@ import { BrowserRouter, Route, Routes, useParams } from "react-router-dom";
 // 14.Use of useParams?
 // >Get the dynamic value from the URL.
 
-// Make it App Global
+// what is redux?
+// what is slice in redux?
+// what is store in redux?
+// what is configureStore in redux?
+// >Store create and set
+// what is useSelector in redux?
+// what is useDispatch in redux?
+
