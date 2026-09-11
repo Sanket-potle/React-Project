@@ -16,14 +16,14 @@ const Aboutpage = () => {
   return (
     <>
       {/* <button onClick={()=> setCount(count + 1)}>Ok</button> */}
-      {/* <ContextApiChaptwo /> */}
+      <ContextApiChaptwo />
       {/* <Testusestate /> */}
       <Form />
       <Submitform />
       <Submitform2 />
       {/* <Checkboes/> */}
       <RegistrationForm />
-      <Product />
+      {/* <Product /> */}
     </>
   );
 };

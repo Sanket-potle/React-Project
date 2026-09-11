@@ -11,29 +11,29 @@ const ContextApiChaptwo = () => {
 
   return (
     <>
-      <div>
-        <DataContext.Consumer>
-          {(product) => {
-            if (!product || product.length === 0) {
-              return <div className="loader"></div>;
-            }
+      {/* <div> */}
+      <DataContext.Consumer>
+        {(product) => {
+          if (!product || product.length === 0) {
+            return <div className="loader"></div>;
+          }
 
-            return (
-              <>
-                {product.map((item) => (
-                  <div key={item.id}>
-                    <h2>{item.title}</h2>
+          return (
+            <>
+              {product.map((item) => (
+                <div key={item.id}>
+                  <h2>{item.title}</h2>
 
-                    <button onClick={() => HandleVicewdetails(item.id)}>
-                      View Details
-                    </button>
-                  </div>
-                ))}
-              </>
-            );
-          }}
-        </DataContext.Consumer>
-      </div>
+                  <button onClick={() => HandleVicewdetails(item.id)}>
+                    View Details
+                  </button>
+                </div>
+              ))}
+            </>
+          );
+        }}
+      </DataContext.Consumer>
+      {/* </div> */}
     </>
   );
 };
