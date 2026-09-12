@@ -57,11 +57,20 @@ import { BrowserRouter, Route, Routes, useParams } from "react-router-dom";
 // 14.Use of useParams?
 // >Get the dynamic value from the URL.
 
-// what is redux?
-// what is slice in redux?
-// what is store in redux?
-// what is configureStore in redux?
-// >Store create and set
-// what is useSelector in redux?
-// what is useDispatch in redux?
+// 15.What is redux?
+// > its use for state management.
+// 1. Store create(configureStore) reducers
+// 2. CounterSlice -> name, initalvalue, reducers
 
+// 16.what is slice in redux?
+// >
+// 17.what is store in redux?
+
+// 18.what is configureStore in redux?
+// >Store create and set up the redux store.
+
+// 19.what is useSelector in redux?
+// >Get Data from store.
+
+// 20.what is useDispatch in redux?
+// >UseDispatch hook is used to dispatch actions to the Redux store.

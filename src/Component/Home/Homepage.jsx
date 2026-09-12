@@ -8,15 +8,13 @@ const Homepage = () => {
   const data = useSelector((state) => state.user.userName);
 
   const handleClick = () => {
-    dispatch((changeName()));
-  }
+    dispatch(changeName());
+  };
   return (
     <>
       <h1>Change Name: {data}</h1>
 
-      <button onClick={handleClick}>
-        Change Name
-      </button>
+      <button onClick={handleClick}>Change Name</button>
 
       <h1>Homepage</h1>
       {/* {data} */}
