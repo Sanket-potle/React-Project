@@ -2,6 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { increment, decrement } from "../redux/CounterSlice.jsx";
 import { changeName } from "../redux/UserNameSlice.jsx";
+import DisplayProduct from "../redux/DisplayProduct.jsx";
 
 const Homepage = () => {
   const dispatch = useDispatch();
@@ -27,6 +28,7 @@ const Homepage = () => {
       {/* <Lecture6 /> */}
       {/* <Userobject /> */}
       {/* <h1>Name : {userName}</h1> */}
+      <DisplayProduct />
     </>
   );
 };

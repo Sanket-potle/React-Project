@@ -74,3 +74,16 @@ import { BrowserRouter, Route, Routes, useParams } from "react-router-dom";
 
 // 20.what is useDispatch in redux?
 // >UseDispatch hook is used to dispatch actions to the Redux store.
+
+// 21.Null & Undefined in JS?
+// >Null is a value that represents no value or no object.
+// >Undefined is a value that represents a variable that has been declared but not assigned a value.
+
+// 22.Reducer Handle Sync Task & extrareducer Handle Async Task?
+
+// 23.Async Thunk in Redux?
+// >Manage the async task in redux use createAsyncThunk function.
+// Automaticlly creates actions when it starts finish, fail, reject,pending, fullfill
+
+// 24.Builders and addCase in Redux?
+
