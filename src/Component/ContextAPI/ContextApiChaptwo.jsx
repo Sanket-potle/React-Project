@@ -8,7 +8,6 @@ const ContextApiChaptwo = () => {
     console.log("ViewDetails:", id);
     navigate(`/viewdetails/${id}`);
   };
-
   return (
     <>
       {/* <div> */}
@@ -17,13 +16,11 @@ const ContextApiChaptwo = () => {
           if (!product || product.length === 0) {
             return <div className="loader"></div>;
           }
-
           return (
             <>
               {product.map((item) => (
                 <div key={item.id}>
                   <h2>{item.title}</h2>
-
                   <button onClick={() => HandleVicewdetails(item.id)}>
                     View Details
                   </button>

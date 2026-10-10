@@ -2,8 +2,8 @@ import axios from "axios";
 import { createContext, useEffect, useState } from "react";
 // import ProductCalltwo from "./ProductCalltwo";
 
-
-// Context API 
+// Create, Provider, Consumer
+// Context API
 // Create, Provide, Consumer
 
 const DataContext = createContext();
@@ -15,9 +15,7 @@ const ContextApi = ({ children }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(
-          "https://dummyjson.com/products"
-        );
+        const response = await axios.get("https://dummyjson.com/products");
 
         setProduct(response.data.products);
       } catch (error) {
@@ -45,9 +43,7 @@ const ContextApi = ({ children }) => {
           
         </div>
       ))} */}
-      <DataContext.Provider value={product}>
-        {children}
-      </DataContext.Provider>
+      <DataContext.Provider value={product}>{children}</DataContext.Provider>
     </>
   );
 };
